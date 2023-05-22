@@ -14,20 +14,26 @@ function checkLength(firstWord, secondWord)
     //3. If first word is longer than second word, return first word
     if(firstWord > secondWord)
     {
-        return firstWord;
+        const firstWordReturned = "The first word " + this.firstWord +  " is longer than the second word " + this.secondWord;
+        return firstWordReturned;
     }
     //4. If second word is longer than first word, return second word
     else if(secondWord > firstWord)
     {
-        return secondWord;
+        const secondWordReturned = "The second word " + this.secondWord +  " is longer than the first word " + this.firstWord;
+        return secondWordReturned;
     }
     //5. If first word and second word have the same length, return both
     else if(firstWord == secondWord)
     {
-        return firstWord + " " + secondWord;
+        const sameLength = "The first word " + this.firstWord +  " and the second word " + this.secondWord + " have the same length";
+        return sameLength;
     }
 }
 
 //6.Call the function and print the result on the console
 console.log(checkLength(firstWord, secondWord));
+
+//7. Print the result on the HTML page
+document.getElementById("result").innerHTML = checkLength(firstWord, secondWord);
 
