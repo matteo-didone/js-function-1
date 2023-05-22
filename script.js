@@ -2,17 +2,17 @@
 //If they have the same length, then print both on the console; otherwise, print the longest one.
 
 //1. Ask the user for 2 words
-const firstWord = prompt("Insert your first word: ");
+const firstWordToCheck = prompt("Insert your first word: ");
 
-if(firstWord == null || firstWord == "" || firstWord == " ") 
+if(firstWordToCheck == null || firstWordToCheck == "" || firstWordToCheck == " ") 
 {
     alert("Please insert a word");
     location.reload(); //Reload the page if the user doesn't insert a word
 }
 
-const secondWord = prompt("Insert your second word: ");
+const secondWordToCheck = prompt("Insert your second word: ");
 
-if(secondWord == null || secondWord == "" || secondWord == " ")
+if(secondWordToCheck == null || secondWordToCheck == "" || secondWordToCheck == " ")
 {
     alert("Please insert a word");
     location.reload(); //Reload the page if the user doesn't insert a word
@@ -21,8 +21,8 @@ if(secondWord == null || secondWord == "" || secondWord == " ")
 //2. Check if the words have the same length using a function
 function checkLength(firstWord, secondWord) 
 {
-    this.firstWord = firstWord;
-    this.secondWord = secondWord;
+    firstWord = firstWordToCheck;
+    secondWord = secondWordToCheck;
 
     //3. If first word is longer than second word, return first word
     if(firstWord > secondWord)
