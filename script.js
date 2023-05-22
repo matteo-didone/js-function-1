@@ -3,7 +3,20 @@
 
 //1. Ask the user for 2 words
 const firstWord = prompt("Insert your first word: ");
+
+if(firstWord == null || firstWord == "" || firstWord == " ") 
+{
+    alert("Please insert a word");
+    location.reload(); //Reload the page if the user doesn't insert a word
+}
+
 const secondWord = prompt("Insert your second word: ");
+
+if(secondWord == null || secondWord == "" || secondWord == " ")
+{
+    alert("Please insert a word");
+    location.reload(); //Reload the page if the user doesn't insert a word
+}
 
 //2. Check if the words have the same length using a function
 function checkLength(firstWord, secondWord) 
